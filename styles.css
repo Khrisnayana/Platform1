@@ -1,4 +1,3 @@
-/* Reset dasar */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
@@ -53,17 +52,18 @@ main {
     border-radius: 10px;
 }
 
+.about-section p,  
+.content p {  
+    text-align: justify; 
+    font-size: 18px;  
+}
+
 .content img {
     display: block;
     max-width: 100%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
-}
-
-.content p {
-    text-align: justify;
-    font-size: 18px;
 }
 
 .table-section {
