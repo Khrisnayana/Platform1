@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+        }
+        .navbar {
+            background-color: black;
+            padding: 10px;
+        }
+        .navbar-brand {
+            color: #e50914 !important;
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            margin-right: 15px;
+        }
+        .profile-menu {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background: black;
+            border-radius: 5px;
+            display: none;
+            padding: 10px;
+        }
+        .profile-menu a {
+            color: white;
+            display: block;
+            padding: 5px 10px;
+        }
+        .profile:hover .profile-menu {
+            display: block;
+        }
+        .banner {
+            background: url('https://source.unsplash.com/1600x900/?movie') center/cover no-repeat;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+        }
+        .banner h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        .banner p {
+            max-width: 500px;
+            margin-bottom: 15px;
+        }
+        .btn-netflix {
+            background-color: #e50914;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+        }
+        .movie-row {
+            overflow-x: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 10px;
+        }
+        .movie-card {
+            width: 250px;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+        .movie-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .movie-card:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">NETFLIX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TV Shows</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+                </ul>
+                <div class="profile position-relative ms-3">
+                    <img src="https://source.unsplash.com/50x50/?profile" class="rounded-circle" alt="Profile">
+                    <div class="profile-menu">
+                        <a href="#">Manage Profiles</a>
+                        <a href="#">Account</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="banner text-white">
+        <h1>Dog Gone</h1>
+        <p>When his beloved dog goes missing, a young man embarks on an incredible search with his parents to find him and give him life-saving medication.</p>
+        <button class="btn btn-netflix">▶ Play</button>
+        <button class="btn btn-light">More Info</button>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Trending Now</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img src="https://source.unsplash.com/250x350/?action" alt="Movie">
+            </div>
+            <div class="movie-card">
+                <img src="https://source.unsplash.com/250x350/?drama" alt="Movie">
+            </div>
+            <div class="movie-card">
+                <img src="https://source.unsplash.com/250x350/?comedy" alt="Movie">
+            </div>
+            <div class="movie-card">
+                <img src="https://source.unsplash.com/250x350/?horror" alt="Movie">
+            </div>
+            <div class="movie-card">
+                <img src="https://source.unsplash.com/250x350/?netflix" alt="Movie">
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
