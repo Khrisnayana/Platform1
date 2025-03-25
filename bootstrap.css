@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(./img/header-img.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(data/netflix/header-img.jpg);
     background-size: cover;
     background-position: 50%;
     height: 90vh;
