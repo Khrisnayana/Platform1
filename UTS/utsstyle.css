@@ -24,6 +24,10 @@ body {
     color: #d9cea3;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
   /* Jumbotron / Beranda */
   .jumbotron {
     background-color: #ffffff;
@@ -47,7 +51,7 @@ body {
     border-radius: 12px;
   }
   
-  /* Section Titles */
+  /* Judul Seksi */
   h2 {
     font-weight: 600;
     margin-bottom: 2rem;
@@ -65,14 +69,44 @@ body {
   .card {
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
   }
   
+  /* Hover Effect */
   .card:hover {
     transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
   
+  /* Animasi masuk saat muncul */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeInUp 0.6s ease;
+  }
+  
+  /* Efek untuk gambar di dalam card */
+  .card img {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Card title dan text */
   .card-title {
     font-weight: 600;
     color: #495057;
@@ -83,6 +117,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
   }
+  
   
   /* Pendidikan */
   #pendidikan table {
@@ -143,5 +178,4 @@ body {
   
   footer a img:hover {
     transform: scale(1.2);
-  }
-  
+  }  

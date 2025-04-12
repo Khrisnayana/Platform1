@@ -8,12 +8,6 @@ function submitStep1() {
         alert("Semua kolom harus diisi dengan benar!");
         return;
     }
-    // Cek untuk memvalidasi email
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailValid.test(email)) {
-        alert("Format email tidak valid!");
-        return;
-    }
 
     // Disable input & button step 1
     document.getElementById("namaDepan").disabled = true;
@@ -21,6 +15,11 @@ function submitStep1() {
     document.getElementById("email").disabled = true;
     document.getElementById("jumlah").disabled = true;
 
+    // Hide Step 1 OK button
+    event.target.style.display = "none";
+
+
+    // Proceed to Step 2
     const formStep2 = document.getElementById("form-step-2");
     formStep2.innerHTML = `<h5 class="mb-3">Masukkan ${jumlah} Pilihan Hobi:</h5>`;
 
@@ -28,18 +27,27 @@ function submitStep1() {
         formStep2.innerHTML += `
             <div class="mb-2">
                 <label for="pilihan${i}" class="form-label">Pilihan ${i}:</label>
-                <input type="text" id="pilihan${i}" class="form-control" required>
+                <input type="text" id="pilihan${i}" class="form-control" placeholder="Contoh: Membaca" required>
             </div>
         `;
     }
 
-    formStep2.innerHTML += `<button class="btn btn-primary mt-2" onclick="submitStep2(${jumlah})">Oke</button>`;
+    // Create "Oke" button for Step 2 and handle the click
+    const submitButton = document.createElement("button");
+    submitButton.classList.add("btn", "btn-primary", "mt-2");
+    submitButton.textContent = "Oke";
+    submitButton.addEventListener('click', () => {
+        submitStep2(jumlah, submitButton);
+    });
+
+    formStep2.appendChild(submitButton);
     formStep2.style.display = "block";
 }
 
-function submitStep2(jumlah) {
+function submitStep2(jumlah, submitButton) {
     let pilihan = [];
 
+    // Collect all the pilihan hobi
     for (let i = 1; i <= jumlah; i++) {
         const input = document.getElementById(`pilihan${i}`);
         const value = input.value.trim();
@@ -51,9 +59,13 @@ function submitStep2(jumlah) {
         input.disabled = true;
     }
 
+    // Hide the "Oke" button after Step 2 submission
+    submitButton.style.display = "none";
+
     const formStep3 = document.getElementById("form-step-3");
     formStep3.innerHTML = `<h5 class="mb-3">Pilih Hobi yang Anda Sukai:</h5>`;
 
+    // Create checkboxes for each hobby choice
     pilihan.forEach((item, index) => {
         formStep3.innerHTML += `
             <div class="form-check">
@@ -65,6 +77,7 @@ function submitStep2(jumlah) {
         `;
     });
 
+    // Add "Oke" button for Step 3
     formStep3.innerHTML += `<button class="btn btn-success mt-3" onclick='submitStep3(${JSON.stringify(pilihan)})'>Oke</button>`;
     formStep3.style.display = "block";
 }
@@ -94,7 +107,6 @@ function submitStep3(pilihanArray) {
     `;
     hasilDiv.style.display = "block";
 
-    // Optional: Disable further input
+    document.querySelectorAll("button").forEach(btn => btn.style.display = "none");
     document.querySelectorAll("input, select, button").forEach(el => el.disabled = true);
 }
-
