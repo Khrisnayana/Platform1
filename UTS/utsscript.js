@@ -8,6 +8,12 @@ function submitStep1() {
         alert("Semua kolom harus diisi dengan benar!");
         return;
     }
+    // Cek untuk memvalidasi email
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailValid.test(email)) {
+        alert("Format email tidak valid!");
+        return;
+    }
 
     // Disable input & button step 1
     document.getElementById("namaDepan").disabled = true;
