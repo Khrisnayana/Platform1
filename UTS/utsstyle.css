@@ -1,0 +1,147 @@
+/* Global */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.887);
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #d9cea3;
+  }
+  
+  /* Jumbotron / Beranda */
+  .jumbotron {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .jumbotron h1 {
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  .jumbotron p {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Carousel */
+  .carousel-inner img {
+    border-radius: 12px;
+  }
+  
+  /* Section Titles */
+  h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #343a40;
+  }
+  
+  /* Tentang */
+  #tentang p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  /* Kisahku */
+  .card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card-title {
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .card-text {
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* Pendidikan */
+  #pendidikan table {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #pendidikan th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  #pendidikan td,
+  #pendidikan th {
+    vertical-align: middle;
+    padding: 1rem;
+  }
+  
+  /* Tugas */
+  form .form-label {
+    font-weight: 500;
+  }
+  
+  form .form-control {
+    border-radius: 10px;
+  }
+  
+  #form-step-1,
+  #form-step-2,
+  #form-step-3 {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Hasil Output */
+  #hasil {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 0.95rem;
+  }
+  
+  footer a img {
+    width: 40px;
+    margin: 0 8px;
+    transition: transform 0.2s;
+  }
+  
+  footer a img:hover {
+    transform: scale(1.2);
+  }
+  
