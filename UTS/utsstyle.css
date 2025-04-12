@@ -1,97 +1,147 @@
+/* Global */
 body {
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
   }
   
-  h1, h2 {
-    font-weight: 700;
-  }
-  
-  section {
-    padding-top: 70px;
-  }
-  
-  .jumbotron {
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
-    color: white;
-    border-radius: 0 0 40px 40px;
-  }
-  
+  /* Navbar */
   .navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.887);
   }
   
-  .nav-link.active, .nav-link:hover {
-    color: #ffc107 !important;
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
   }
   
+  .nav-link {
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #d9cea3;
+  }
+  
+  /* Jumbotron / Beranda */
+  .jumbotron {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .jumbotron h1 {
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  .jumbotron p {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Carousel */
+  .carousel-inner img {
+    border-radius: 12px;
+  }
+  
+  /* Section Titles */
+  h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #343a40;
+  }
+  
+  /* Tentang */
+  #tentang p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  /* Kisahku */
   .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 12px;
   }
   
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
   }
   
-  .card-img-top {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 200px;
-    object-fit: cover;
+  .card-title {
+    font-weight: 600;
+    color: #495057;
   }
   
-  footer {
-    margin-top: 50px;
-    background: #343a40;
-    color: #fff;
-    font-size: 0.9rem;
+  .card-text {
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
   
-  form .form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(78, 84, 200, 0.25);
-    border-color: #4e54c8;
+  /* Pendidikan */
+  #pendidikan table {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
   }
   
-  .btn-primary {
-    background-color: #4e54c8;
-    border: none;
-  }
-  
-  .btn-primary:hover {
-    background-color: #3c40a8;
-  }
-  
-  .table th, .table td {
-    vertical-align: middle;
-  }
-  footer {
+  #pendidikan th {
     background-color: #343a40;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    margin: 0;
-    font-size: 18px;
-}
-
-footer a {
-    display: inline-block;
-    margin: 10px;
-}
-
-footer img {
+  }
+  
+  #pendidikan td,
+  #pendidikan th {
+    vertical-align: middle;
+    padding: 1rem;
+  }
+  
+  /* Tugas */
+  form .form-label {
+    font-weight: 500;
+  }
+  
+  form .form-control {
+    border-radius: 10px;
+  }
+  
+  #form-step-1,
+  #form-step-2,
+  #form-step-3 {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Hasil Output */
+  #hasil {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 0.95rem;
+  }
+  
+  footer a img {
     width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-footer img:hover {
+    margin: 0 8px;
+    transition: transform 0.2s;
+  }
+  
+  footer a img:hover {
     transform: scale(1.2);
-}
+  }
+  
