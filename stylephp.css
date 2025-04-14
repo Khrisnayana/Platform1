@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background: #f0f0f0;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+form, ul {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
