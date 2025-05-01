@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    padding: 20px;
+  }
+  .login-box, form {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .task {
+    background: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    width: 400px;
+    border: 1px solid #ccc;
+  }
+  .task.done {
+    text-decoration: line-through;
+    color: gray;
+  }
+  a {
+    margin-left: 10px;
+    color: blue;
+  }
+  
